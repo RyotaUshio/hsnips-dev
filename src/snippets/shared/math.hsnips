@@ -1,0 +1,81 @@
+context !math(context)
+snippet mk wA
+$${1}$``
+rv = inlineMathSuffix(t[1][0]);
+``$2
+endsnippet
+
+context math(context)
+snippet ali bA
+\begin{aligned}
+$1
+\end{aligned}
+endsnippet
+
+context math(context)
+snippet rm iA
+\mathrm{$1}
+endsnippet
+
+context math(context)
+snippet cal iA
+\mathcal{$1}
+endsnippet
+
+context math(context)
+snippet bf iA
+\mathbf{$1}
+endsnippet
+
+context math(context)
+snippet bb iA
+\mathbb{$1}
+endsnippet
+
+context math(context)
+snippet text iA
+\text{$1}
+endsnippet
+
+context math(context)
+snippet fd iA
+_{$1}
+endsnippet
+
+context math(context)
+snippet rd iA
+^{$1}
+endsnippet
+
+context math(context)
+snippet `(?<!\\)(alpha|beta|gamma|Gamma|delta|Delta|epsilon|varepsilon|zeta|eta|theta|vartheta|Theta|iota|kappa|lambda|Lambda|mu|nu|xi|omicron|pi|rho|varrho|sigma|Sigma|tau|upsilon|Upsilon|phi|varphi|Phi|chi|psi|omega|Omega)` "Greek characters" iA
+\``rv = m[1]``
+endsnippet
+
+context math(context)
+snippet `(?<!\\)(max|min|argmax|argmin|parallel|perp|partial|nabla|hbar|ell|infty|oplus|ominus|otimes|oslash|square|star|dagger|vee|wedge|subseteq|subset|supseteq|supset|emptyset|exists|nexists|forall|implies|impliedby|iff|setminus|neg|lor|land|bigcup|bigcap|cdot|times|simeq|approx|leq|geq|neq|gg|ll|equiv|sim|propto|rightarrow|leftarrow|Rightarrow|Leftarrow|leftrightarrow|to|mapsto|cap|cup|in|sum|prod|exp|ln|log|det|dots|vdots|ddots|pm|mp|int|iint|iiint|oint)` "Symbols" iA
+\``rv = m[1]``
+endsnippet
+
+# context math(context)
+# snippet `(.?)(pp|mm)` "plus" A
+# ``
+# const symbol = {
+#     pp: '+',
+#     mm: '-',
+# }[m[2]];
+# rv = m[1] === ' ' ? ` ${symbol} ` : m[1] === '$' ? `$${symbol}` : m[1] + ` ${symbol} `;
+# ``
+# endsnippet
+
+context math(context)
+snippet ` //` "fraction" iA
+\frac{$1}{$2}$0
+endsnippet
+
+context math(context)
+snippet `([^ /]+)/` "fraction" iA
+``
+rv = autoFraction(m[1]);
+``{$1}$0
+endsnippet

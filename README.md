@@ -5,7 +5,9 @@ This is my current setup for developing HyperSnips snippets.
 
 - Global block JavaScript is developed with TypeScript and unit-tested with [Vitest](https://vitest.dev/). It makes maintainance far easier.
     - Each `src/globals/[LANGUAGE].ts` exports what will be included in the global block of the corresponding snippet file.
-- The snippet blocks for each language is located at `src/snippets/[LANGUAGE].hsnips`. It is in the exact same format as normal `.hsnips` files except that it does not have the `global ... endglobal` block at the top.
+- The snippet blocks for each language is located at `src/snippets/[LANGUAGE].hsnips`. It is in the exact same format as normal `.hsnips` files except:
+    - It does not have the `global ... endglobal` block at the top.
+    - It allows you to include common snippets shared by several (but not necessarily all) languages using `#include "..."`.
 - When running `pnpm build`, [Rolldown](https://rolldown.rs/) generates the global JavaScript from `src/globals[LANGUAGE.ts]`, and the output is concatenated with the snippet blocks from `src/snippets/[LANGUAGE].hsnips`.
 
 ## Setup
