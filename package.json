@@ -1,0 +1,27 @@
+{
+  "name": "hsnips-dev",
+  "version": "0.1.0",
+  "description": "My setup for developing HyperSnips snippets.",
+  "scripts": {
+    "build": "tsx scripts/build.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"**/*.ts\"",
+    "format:check": "prettier --check \"**/*.ts\"",
+    "test": "vitest run"
+  },
+  "author": "Ryota Ushio",
+  "license": "MIT",
+  "packageManager": "pnpm@10.18.3",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.0",
+    "eslint": "^9.39.1",
+    "prettier": "^3.6.2",
+    "rolldown": "1.0.0-beta.47",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.3",
+    "vitest": "^4.0.8"
+  }
+}

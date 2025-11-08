@@ -1,0 +1,6 @@
+context !math(context)
+snippet dm "display math" A
+\begin{equation}
+$1
+\end{equation}
+endsnippet
