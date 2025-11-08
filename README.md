@@ -41,7 +41,7 @@ This repo is still very young and many useful snippets are yet to be added. To c
 
 ### Optional: Fix `<Esc>` key
 
-Ignore this section if you're not a [vscode-vim](https://github.com/VSCodeVim/Vim) user!
+Ignore this section if you're not a [vscodevim](https://github.com/VSCodeVim/Vim) user!
 
 By default, you have to press `<Esc>` **twice** to go back to Normal mode after expanding a snippet. This is annoying!
 
