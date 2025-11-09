@@ -43,6 +43,19 @@ This repo is still very young and many useful snippets are yet to be added. To c
 - Global blocks: `src/globals/[LANGUAGE].hsnips`
 - Snippet blocks: `src/globals/[LANGUAGE].hsnips`
 
+### Fix `<Tab>` key
+
+By default, VSCode accepts a suggestion when `<Tab>` is pressed. This causes conflicts with snippets with tab stops.
+
+To fix it, run `Preferences: Open Keyboard Shortcuts (JSON)` command, and add the following to `keybindings.json`:
+
+```
+  {
+    "key": "tab",
+    "command": "-acceptSelectedSuggestion"
+  }
+```
+
 ### Optional: Fix `<Esc>` key
 
 Ignore this section if you're not a [vscodevim](https://github.com/VSCodeVim/Vim) user!

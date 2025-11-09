@@ -1,0 +1,129 @@
+# Greek
+context math(context)
+snippet `(?<!\\)(alpha|beta|gamma|Gamma|delta|Delta|epsilon|varepsilon|zeta|eta|theta|vartheta|Theta|iota|kappa|lambda|Lambda|mu|nu|xi|omicron|pi|rho|varrho|sigma|Sigma|tau|upsilon|Upsilon|phi|varphi|Phi|chi|psi|omega|Omega)` iA
+\``rv = m[1]``
+endsnippet
+
+# 👎 epsilon > e\psilon
+# 👍 eps > \epsilon
+context math(context)
+snippet `(?<!\\)eps` iA
+\epsilon
+endsnippet
+
+# Greek 2
+context math(context)
+snippet ;a iA
+\alpha
+endsnippet
+
+context math(context)
+snippet ;b iA
+\beta
+endsnippet
+
+context math(context)
+snippet ;g iA
+\gamma
+endsnippet
+
+# sets, e.g. RR > \R for reals
+context math(context)
+snippet `(R|C|Q|N|Z){2}` iA
+\``rv = m[1]``
+endsnippet
+
+context math(context)
+snippet ;G iA
+\Gamma
+endsnippet
+
+context math(context)
+snippet ;d iA
+\delta
+endsnippet
+
+context math(context)
+snippet ;D iA
+\Delta
+endsnippet
+
+context math(context)
+snippet ;e iA
+\epsilon
+endsnippet
+
+context math(context)
+snippet ;t iA
+\theta
+endsnippet
+
+context math(context)
+snippet ;T iA
+\Theta
+endsnippet
+
+context math(context)
+snippet ;k iA
+\kappa
+endsnippet
+
+context math(context)
+snippet ;l iA
+\lambda
+endsnippet
+
+context math(context)
+snippet ;L iA
+\Lambda
+endsnippet
+
+context math(context)
+snippet ;m iA
+\mu
+endsnippet
+
+context math(context)
+snippet ;n iA
+\nu
+endsnippet
+
+context math(context)
+snippet ;p iA
+\pi
+endsnippet
+
+context math(context)
+snippet ;P iA
+\Pi
+endsnippet
+
+context math(context)
+snippet ;r iA
+\rho
+endsnippet
+
+context math(context)
+snippet ;t iA
+\tau
+endsnippet
+
+context math(context)
+snippet ;T iA
+\Tau
+endsnippet
+
+context math(context)
+snippet ;x iA
+\xi
+endsnippet
+
+context math(context)
+snippet ;y iA
+\eta
+endsnippet
+
+context math(context)
+snippet ;z iA
+\zeta
+endsnippet

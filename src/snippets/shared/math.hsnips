@@ -1,3 +1,5 @@
+#include "greek.hsnips"
+
 context !math(context)
 snippet mk wA
 $${1}$``
@@ -48,34 +50,67 @@ snippet rd iA
 endsnippet
 
 context math(context)
-snippet `(?<!\\)(alpha|beta|gamma|Gamma|delta|Delta|epsilon|varepsilon|zeta|eta|theta|vartheta|Theta|iota|kappa|lambda|Lambda|mu|nu|xi|omicron|pi|rho|varrho|sigma|Sigma|tau|upsilon|Upsilon|phi|varphi|Phi|chi|psi|omega|Omega)` "Greek characters" iA
-\``rv = m[1]``
-endsnippet
-
-context math(context)
 snippet `(?<!\\)(max|min|argmax|argmin|parallel|perp|partial|nabla|hbar|ell|infty|oplus|ominus|otimes|oslash|square|star|dagger|vee|wedge|subseteq|subset|supseteq|supset|emptyset|exists|nexists|forall|implies|impliedby|iff|setminus|neg|lor|land|bigcup|bigcap|cdot|times|simeq|approx|leq|geq|neq|gg|ll|equiv|sim|propto|rightarrow|leftarrow|Rightarrow|Leftarrow|leftrightarrow|to|mapsto|cap|cup|in|sum|prod|exp|ln|log|det|dots|vdots|ddots|pm|mp|int|iint|iiint|oint)` "Symbols" iA
 \``rv = m[1]``
 endsnippet
 
-# context math(context)
-# snippet `(.?)(pp|mm)` "plus" A
-# ``
-# const symbol = {
-#     pp: '+',
-#     mm: '-',
-# }[m[2]];
-# rv = m[1] === ' ' ? ` ${symbol} ` : m[1] === '$' ? `$${symbol}` : m[1] + ` ${symbol} `;
-# ``
-# endsnippet
+context math(context)
+snippet `(\\?)(hat|tilde|bar|vec)` "Commands with argument" iA
+\``rv = m[2]``{$1}$0
+endsnippet
 
 context math(context)
-snippet `([^ /]+)/` "fraction" iA
+snippet `(\\?)(abs|set|norm|enorm|supnorm|opnorm|fnorm)` "Custom macros with argument" iA
+\``rv = m[2]``{$1}$0
+endsnippet
+
+context math(context)
+snippet sq iA
+\sqrt{$1}$0
+endsnippet
+
+context math(context)
+snippet gsim A
+\gtrsim{$1}$0
+endsnippet
+
+context math(context)
+snippet lsim A
+\lesssim{$1}$0
+endsnippet
+
+context math(context)
+snippet == A
+&= 
+endsnippet
+
+context math(context)
+snippet `(.?)(pp|mm)` "plus" A
+``
+const symbol = {
+    pp: '+',
+    mm: '-',
+}[m[2]];
+rv = m[1] === ' ' ? ` ${symbol} ` : m[1] === '$' ? `$${symbol}` : m[1] + ` ${symbol} `;
+``
+endsnippet
+
+# auto-fraction
+# e.g. (f(x)/ > (\frac{f(x)}{}
+context math(context)
+snippet `([^ /]+)/` iA
 ``
 rv = autoFraction(m[1]);
 ``{$1}$0
 endsnippet
 
+# fraction
 context math(context)
-snippet // "fraction" iA
+snippet // iA
 \frac{$1}{$2}$0
+endsnippet
+
+context math(context)
+snippet ( iA
+($1)$0
 endsnippet
