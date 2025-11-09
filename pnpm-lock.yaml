@@ -11,21 +11,15 @@ importers:
       '@eslint/js':
         specifier: ^9.39.1
         version: 9.39.1
-      '@types/node':
-        specifier: ^24.10.0
-        version: 24.10.0
       eslint:
         specifier: ^9.39.1
         version: 9.39.1
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
-      rolldown:
-        specifier: 1.0.0-beta.47
-        version: 1.0.0-beta.47
-      tsx:
-        specifier: ^4.20.6
-        version: 4.20.6
+      snipbuild:
+        specifier: ^0.1.2
+        version: 0.1.2
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -975,6 +969,10 @@ packages:
   siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
 
+  snipbuild@0.1.2:
+    resolution: {integrity: sha512-gG33HYhXhIUtWR7wj52UsL5rWsr3kNvGP9/yd1JvHU0qhA7HIuB7peuZo63/FOQkGKhpBplB0uW3Dz9xImuptQ==}
+    hasBin: true
+
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
@@ -1448,6 +1446,7 @@ snapshots:
   '@types/node@24.10.0':
     dependencies:
       undici-types: 7.16.0
+    optional: true
 
   '@typescript-eslint/eslint-plugin@8.46.3(@typescript-eslint/parser@8.46.3(eslint@9.39.1)(typescript@5.9.3))(eslint@9.39.1)(typescript@5.9.3)':
     dependencies:
@@ -1799,6 +1798,7 @@ snapshots:
   get-tsconfig@4.13.0:
     dependencies:
       resolve-pkg-maps: 1.0.0
+    optional: true
 
   glob-parent@5.1.2:
     dependencies:
@@ -1934,7 +1934,8 @@ snapshots:
 
   resolve-from@4.0.0: {}
 
-  resolve-pkg-maps@1.0.0: {}
+  resolve-pkg-maps@1.0.0:
+    optional: true
 
   reusify@1.1.0: {}
 
@@ -2000,6 +2001,10 @@ snapshots:
 
   siginfo@2.0.0: {}
 
+  snipbuild@0.1.2:
+    dependencies:
+      rolldown: 1.0.0-beta.47
+
   source-map-js@1.2.1: {}
 
   stackback@0.0.2: {}
@@ -2040,6 +2045,7 @@ snapshots:
       get-tsconfig: 4.13.0
     optionalDependencies:
       fsevents: 2.3.3
+    optional: true
 
   type-check@0.4.0:
     dependencies:
@@ -2058,7 +2064,8 @@ snapshots:
 
   typescript@5.9.3: {}
 
-  undici-types@7.16.0: {}
+  undici-types@7.16.0:
+    optional: true
 
   uri-js@4.4.1:
     dependencies:
