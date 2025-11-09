@@ -1,6 +1,6 @@
 # My hsnips
 
-I'm trying to use [HyperSnips](https://github.com/draivin/hsnips) to make it easier to type $\LaTeX$ equations in VSCode/Cursor.
+I'm trying out [HyperSnips](https://github.com/draivin/hsnips) to make it easier to type $\LaTeX$ equations in VSCode/Cursor.
 This is my current setup for developing HyperSnips snippets.
 
 It turned out to be pretty hard to work directly with the vanilla `.hsnips` files, especially when I have to a bunch of JavaScript to implement something complex like auto-fraction (inspired by [Latex Suite for Obsidian](https://github.com/artisticat1/obsidian-latex-suite?tab=readme-ov-file#auto-fraction)).
