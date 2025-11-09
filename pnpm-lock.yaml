@@ -18,8 +18,8 @@ importers:
         specifier: ^3.6.2
         version: 3.6.2
       snipbuild:
-        specifier: ^0.2.1
-        version: 0.2.1
+        specifier: ^0.2.2
+        version: 0.2.2
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -969,8 +969,8 @@ packages:
   siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
 
-  snipbuild@0.2.1:
-    resolution: {integrity: sha512-zXEMZI8u4vs9hHIZrzOG/SBlcpohdO1xZOo6HFT3mLEkjt2UjPyjm5DODy2COg9Ay1m+Rq069xFqH1spMJCoOw==}
+  snipbuild@0.2.2:
+    resolution: {integrity: sha512-yCfYl+pS8snikvePNkm4aXZWmwInGx7Ze3DX3RX/cHejGZ/9KjiKo8Y2qdsEnwg4+Mnx2NMngI17b1VsYtYzeg==}
     hasBin: true
 
   source-map-js@1.2.1:
@@ -2001,7 +2001,7 @@ snapshots:
 
   siginfo@2.0.0: {}
 
-  snipbuild@0.2.1:
+  snipbuild@0.2.2:
     dependencies:
       rolldown: 1.0.0-beta.47
 

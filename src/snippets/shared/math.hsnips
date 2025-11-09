@@ -69,13 +69,13 @@ endsnippet
 # endsnippet
 
 context math(context)
-snippet ` //` "fraction" iA
-\frac{$1}{$2}$0
-endsnippet
-
-context math(context)
 snippet `([^ /]+)/` "fraction" iA
 ``
 rv = autoFraction(m[1]);
 ``{$1}$0
+endsnippet
+
+context math(context)
+snippet // "fraction" iA
+\frac{$1}{$2}$0
 endsnippet
