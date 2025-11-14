@@ -1,0 +1,24 @@
+context math(context)
+snippet rm iA
+\mathrm{$1}
+endsnippet
+
+context math(context)
+snippet cal iA
+\mathcal{$1}
+endsnippet
+
+context math(context)
+snippet bf iA
+\mathbf{$1}
+endsnippet
+
+context math(context)
+snippet bb iA
+\mathbb{$1}
+endsnippet
+
+context math(context)
+snippet bm iA
+\bm{$1}$0
+endsnippet

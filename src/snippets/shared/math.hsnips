@@ -15,31 +15,6 @@ $1
 endsnippet
 
 context math(context)
-snippet rm iA
-\mathrm{$1}
-endsnippet
-
-context math(context)
-snippet cal iA
-\mathcal{$1}
-endsnippet
-
-context math(context)
-snippet bf iA
-\mathbf{$1}
-endsnippet
-
-context math(context)
-snippet bb iA
-\mathbb{$1}
-endsnippet
-
-context math(context)
-snippet text iA
-\text{$1}
-endsnippet
-
-context math(context)
 snippet fd iA
 _{$1}
 endsnippet
@@ -80,8 +55,18 @@ snippet lsim A
 endsnippet
 
 context math(context)
-snippet == A
-&= 
+snippet `(\s)?==` A
+``rv = m[1] ?? ' '``&= 
+endsnippet
+
+context math(context)
+snippet === iA
+\equiv
+endsnippet
+
+context math(context)
+snippet &= = iA
+\equiv
 endsnippet
 
 context math(context)
@@ -114,3 +99,25 @@ context math(context)
 snippet ( iA
 ($1)$0
 endsnippet
+
+context math(context)
+snippet text iA
+\text{$1}
+endsnippet
+
+context math(context)
+snippet def iA
+\coloneqq
+endsnippet
+
+context math(context)
+snippet ee iA
+\exists $1
+endsnippet
+
+context math(context)
+snippet aa iA
+\forall $1
+endsnippet
+
+#include "font.hsnips"
