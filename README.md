@@ -20,18 +20,7 @@ That's why I'm using [snipbuild](https://github.com/RyotaUshio/snipbuild), a bui
 
 1. `pnpm i` to install dependencies
 2. `pnpm build` to generate snippet files under the `dist/` directory
-3. Install the generated snippet files. For example, you can use the following script on macOS (assuming you've installed both VSCode and Cursor):
-
-    ```bash
-    #!/usr/bin/env bash
-    set -euo pipefail
-
-    for app in Code Cursor; do
-    dir="$HOME/Library/Application Support/$app/User/globalStorage/draivin.hsnips"
-    mkdir -p "$dir"
-    ln -sf $(realpath dist) "$dir/hsnips"
-    done
-    ```
+3. Install the generated snippet files. On macOS, you can just run `make` to do it.
 4. Make sure you execute the `HyperSnips: Reload Snippets` command after updating the snippet files.
 
 Once you install the snippets using symbolic links (as shown above), all you have to do after making edit to the source code is `pnpm bulid` & `HyperSnips: Reload Snippets`.
