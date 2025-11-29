@@ -83,7 +83,7 @@ endsnippet
 # auto-fraction
 # e.g. (f(x)/ > (\frac{f(x)}{}
 context math(context)
-snippet `([^ /]+)/` iA
+snippet `([^ $]+)/` iA
 ``
 rv = autoFraction(m[1]);
 ``{$1}$0
