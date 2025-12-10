@@ -25,13 +25,18 @@ snippet rd iA
 endsnippet
 
 context math(context)
-snippet `(?<!\\)(max|min|argmax|argmin|parallel|perp|partial|nabla|hbar|ell|infty|oplus|ominus|otimes|oslash|square|star|dagger|vee|wedge|subseteq|subset|supseteq|supset|emptyset|exists|nexists|forall|implies|impliedby|iff|setminus|neg|lor|land|bigcup|bigcap|cdot|times|simeq|approx|leq|geq|neq|gg|ll|equiv|sim|propto|rightarrow|leftarrow|Rightarrow|Leftarrow|leftrightarrow|to|mapsto|cap|cup|in|sum|prod|exp|ln|log|det|dots|vdots|ddots|pm|mp|int|iint|iiint|oint)` "Symbols" iA
+snippet `(?<!\\)(max|min|argmax|argmin|parallel|perp|partial|nabla|hbar|ell|infty|oplus|ominus|otimes|oslash|square|star|dagger|vee|wedge|subseteq|subset|supseteq|supset|emptyset|exists|nexists|forall|implies|impliedby|iff|setminus|neg|lor|land|bigcup|bigcap|cdot|times|simeq|approx|leq|geq|neq|gg|ll|equiv|sim|propto|rightarrow|leftarrow|Rightarrow|Leftarrow|leftrightarrow|to|mapsto|cap|cup|in|sum|prod|exp|ln|log|det|dots|vdots|ddots|pm|mp|int|iint|iiint|oint|mid)` "Symbols" iA
 \``rv = m[1]``
 endsnippet
 
 context math(context)
-snippet `(\\?)(hat|tilde|bar|vec)` "Commands with argument" iA
+snippet `(\\?)(tilde|bar|vec)` "Commands with argument" iA
 \``rv = m[2]``{$1}$0
+endsnippet
+
+context math(context)
+snippet hat iA
+\widehat{$1}$0
 endsnippet
 
 context math(context)
@@ -57,11 +62,6 @@ endsnippet
 context math(context)
 snippet `(\s)?==` A
 ``rv = m[1] ?? ' '``&= 
-endsnippet
-
-context math(context)
-snippet === iA
-\equiv
 endsnippet
 
 context math(context)

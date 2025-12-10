@@ -9,7 +9,8 @@ export function math(context: Context): boolean {
     for (const scope of context.scopes) {
         if (
             scope.startsWith('comment.line') ||
-            scope === 'punctuation.definition.string.begin.tex'
+            scope === 'punctuation.definition.string.begin.tex' ||
+            scope === 'meta.definition.label.latex'
         ) {
             return false;
         }

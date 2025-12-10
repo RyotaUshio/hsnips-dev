@@ -6,3 +6,7 @@ snippet dm "display math" A
 $1
 \end{equation}
 endsnippet
+
+snippet quad A
+\quad
+endsnippet
