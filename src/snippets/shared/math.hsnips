@@ -4,7 +4,7 @@ context !math(context)
 snippet mk wA
 $${1}$``
 rv = inlineMathSuffix(t[1][0]);
-``$2
+``$0
 endsnippet
 
 context math(context)
@@ -15,22 +15,43 @@ $1
 endsnippet
 
 context math(context)
+snippet gat bA
+\begin{gathered}
+$1
+\end{gathered}
+endsnippet
+
+context math(context)
+snippet cas bA
+\begin{cases}
+$1
+\end{cases}
+endsnippet
+
+context math(context)
+snippet dcas bA
+\begin{dcases}
+$1
+\end{dcases}
+endsnippet
+
+context math(context)
 snippet fd iA
-_{$1}
+_{$1}$0
 endsnippet
 
 context math(context)
 snippet rd iA
-^{$1}
+^{$1}$0
 endsnippet
 
 context math(context)
-snippet `(?<!\\)(max|min|argmax|argmin|parallel|perp|partial|nabla|hbar|ell|infty|oplus|ominus|otimes|oslash|square|star|dagger|vee|wedge|subseteq|subset|supseteq|supset|emptyset|exists|nexists|forall|implies|impliedby|iff|setminus|neg|lor|land|bigcup|bigcap|cdot|times|simeq|approx|leq|geq|neq|gg|ll|equiv|sim|propto|rightarrow|leftarrow|Rightarrow|Leftarrow|leftrightarrow|to|mapsto|cap|cup|in|sum|prod|exp|ln|log|det|dots|vdots|ddots|pm|mp|int|iint|iiint|oint|mid)` "Symbols" iA
+snippet `(?<!\\)(max|min|argmax|argmin|parallel|perp|partial|nabla|hbar|ell|infty|oplus|ominus|otimes|oslash|square|star|dagger|vee|wedge|subseteq|subset|supseteq|supset|emptyset|exists|nexists|forall|implies|impliedby|iff|setminus|neg|lor|land|bigcup|bigcap|cdot|times|simeq|approx|leq|geq|neq|gg|ll|equiv|sim|propto|rightarrow|leftarrow|Rightarrow|Leftarrow|leftrightarrow|to|mapsto|cap|cup|in|sum|prod|exp|ln|log|det|dots|vdots|ddots|pm|mp|int|iint|iiint|oint|mid|lim|left|right|lvert|rvert|lVert|rVert)` iA
 \``rv = m[1]``
 endsnippet
 
 context math(context)
-snippet `(\\?)(tilde|bar|vec)` "Commands with argument" iA
+snippet `(\\?)(tilde|bar|vec|text)` "Commands with argument" iA
 \``rv = m[2]``{$1}$0
 endsnippet
 
@@ -40,7 +61,7 @@ snippet hat iA
 endsnippet
 
 context math(context)
-snippet `(\\?)(abs|set|norm|enorm|supnorm|opnorm|fnorm)` "Custom macros with argument" iA
+snippet `(\\?)(Var|Cov|paren|abs|set|norm|enorm|supnorm|opnorm|fnorm)` "Custom macros with argument" iA
 \``rv = m[2]``{$1}$0
 endsnippet
 
@@ -69,15 +90,10 @@ snippet &= = iA
 \equiv
 endsnippet
 
+# fraction
 context math(context)
-snippet `(.?)(pp|mm)` "plus" A
-``
-const symbol = {
-    pp: '+',
-    mm: '-',
-}[m[2]];
-rv = m[1] === ' ' ? ` ${symbol} ` : m[1] === '$' ? `$${symbol}` : m[1] + ` ${symbol} `;
-``
+snippet // iA
+\frac{$1}{$2}$0
 endsnippet
 
 # auto-fraction
@@ -89,20 +105,9 @@ rv = autoFraction(m[1]);
 ``{$1}$0
 endsnippet
 
-# fraction
-context math(context)
-snippet // iA
-\frac{$1}{$2}$0
-endsnippet
-
 context math(context)
 snippet ( iA
 ($1)$0
-endsnippet
-
-context math(context)
-snippet text iA
-\text{$1}
 endsnippet
 
 context math(context)
@@ -111,13 +116,8 @@ snippet def iA
 endsnippet
 
 context math(context)
-snippet ee iA
-\exists $1
-endsnippet
-
-context math(context)
-snippet aa iA
-\forall $1
+snippet `(E|P|I){2}` iA
+\``rv = m[1]``{$1}$0
 endsnippet
 
 #include "font.hsnips"

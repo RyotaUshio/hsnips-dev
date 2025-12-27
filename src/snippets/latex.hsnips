@@ -10,3 +10,12 @@ endsnippet
 snippet quad A
 \quad
 endsnippet
+
+context !math(context)
+snippet `(\\?)(textbf|textit|cref|eqref)` iA
+\``rv = m[2]``{$1}$0
+endsnippet
+
+snippet ( iA
+($1)$0
+endsnippet
