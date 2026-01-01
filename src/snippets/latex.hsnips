@@ -3,7 +3,7 @@
 context !math(context)
 snippet dm "display math" A
 \begin{equation}
-$1
+  $1
 \end{equation}
 endsnippet
 
@@ -18,4 +18,10 @@ endsnippet
 
 snippet ( iA
 ($1)$0
+endsnippet
+
+snippet \begin iA
+\begin{$1}
+  $0
+\end{$1}
 endsnippet

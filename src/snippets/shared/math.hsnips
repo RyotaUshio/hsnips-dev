@@ -1,37 +1,41 @@
 #include "greek.hsnips"
 
+# context !math(context)
+# snippet mk wA
+# $${1}$``
+# rv = inlineMathSuffix(t[1][0]);
+# ``$0
+# endsnippet
 context !math(context)
 snippet mk wA
-$${1}$``
-rv = inlineMathSuffix(t[1][0]);
-``$0
+$${1}$$0
 endsnippet
 
 context math(context)
 snippet ali bA
 \begin{aligned}
-$1
+  $1
 \end{aligned}
 endsnippet
 
 context math(context)
 snippet gat bA
 \begin{gathered}
-$1
+  $1
 \end{gathered}
 endsnippet
 
 context math(context)
 snippet cas bA
 \begin{cases}
-$1
+  $1
 \end{cases}
 endsnippet
 
 context math(context)
 snippet dcas bA
 \begin{dcases}
-$1
+  $1
 \end{dcases}
 endsnippet
 
@@ -46,7 +50,7 @@ snippet rd iA
 endsnippet
 
 context math(context)
-snippet `(?<!\\)(max|min|argmax|argmin|parallel|perp|partial|nabla|hbar|ell|infty|oplus|ominus|otimes|oslash|square|star|dagger|vee|wedge|subseteq|subset|supseteq|supset|emptyset|exists|nexists|forall|implies|impliedby|iff|setminus|neg|lor|land|bigcup|bigcap|cdot|times|simeq|approx|leq|geq|neq|gg|ll|equiv|sim|propto|rightarrow|leftarrow|Rightarrow|Leftarrow|leftrightarrow|to|mapsto|cap|cup|in|sum|prod|exp|ln|log|det|dots|vdots|ddots|pm|mp|int|iint|iiint|oint|mid|lim|left|right|lvert|rvert|lVert|rVert)` iA
+snippet `(?<!\\)(max|min|argmax|argmin|inf|sup|parallel|perp|partial|nabla|hbar|ell|infty|oplus|ominus|otimes|oslash|square|star|dagger|vee|wedge|subseteq|subset|supseteq|supset|emptyset|exists|nexists|forall|implies|impliedby|iff|setminus|neg|lor|land|bigcup|bigcap|cdot|times|simeq|approx|leq|geq|neq|gg|ll|equiv|sim|propto|xrightarrow|xleftarrow|rightarrow|leftarrow|Rightarrow|Leftarrow|leftrightarrow|to|mapsto|cap|cup|in|sum|prod|exp|ln|log|det|dots|vdots|ddots|pm|mp|int|iint|iiint|oint|mid|lim|left|right|lvert|rvert|lVert|rVert)` iA
 \``rv = m[1]``
 endsnippet
 
@@ -56,8 +60,23 @@ snippet `(\\?)(tilde|bar|vec|text)` "Commands with argument" iA
 endsnippet
 
 context math(context)
-snippet hat iA
+snippet `(\\?)hat` iA
 \widehat{$1}$0
+endsnippet
+
+context math(context)
+snippet `(\\?)Hat` iA
+\widehat{$1}$0
+endsnippet
+
+context math(context)
+snippet `(\\?)til` iA
+\tilde{$1}$0
+endsnippet
+
+context math(context)
+snippet `(\\?)Til` iA
+\widetilde{$1}$0
 endsnippet
 
 context math(context)

@@ -54,6 +54,16 @@ snippet ;e iA
 endsnippet
 
 context math(context)
+snippet ;s iA
+\sigma
+endsnippet
+
+context math(context)
+snippet ;S iA
+\Sigma
+endsnippet
+
+context math(context)
 snippet ;t iA
 \theta
 endsnippet
